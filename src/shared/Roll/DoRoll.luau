@@ -1,5 +1,6 @@
--- Roll/DoRoll.luau
-local Items = require(script.Parent.Parent.Config.Items)
+-- DoRoll.luau
+local RS    = game:GetService("ReplicatedStorage")
+local Items = require(RS.Shared.Config.Items)
 
 return function(luckMultiplier)
     luckMultiplier = luckMultiplier or 1.0

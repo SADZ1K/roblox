@@ -1,6 +1,7 @@
--- Roll/GetLuck.luau
-local Settings = require(script.Parent.Parent.Config.Settings)
-local Boosts   = require(script.Parent.Parent.Config.Boosts)
+-- GetLuck.luau
+local RS       = game:GetService("ReplicatedStorage")
+local Settings = require(RS.Shared.Config.Settings)
+local Boosts   = require(RS.Shared.Config.Boosts)
 
 return function(playerData)
     local luck = Settings.BaseLuck

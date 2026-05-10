@@ -11,7 +11,9 @@ local SessionManager = {}
 function SessionManager.OnJoin(player, remotes)
     sessions[player.UserId] = LoadData(player)
     lastRoll[player.UserId] = 0
-    player.CharacterAdded:Wait()
+    if not player.Character then
+        player.CharacterAdded:Wait()
+    end
     task.wait(0.5)
     remotes.UpdateDataEvent:FireClient(player, sessions[player.UserId])
 end
